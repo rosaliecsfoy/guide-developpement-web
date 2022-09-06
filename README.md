@@ -7,7 +7,7 @@ Ensemble de règles et bonnes pratiques de développement Web
 [Ressources et liens](ressources-et-liens.md)
   
 [Cadriciel](cadriciel/index.html)  
-[Cadriciel-Sass](cadriciel-sass/index.html)
+[Cadriciel Sass](cadriciel-sass/index.html)
 
 [Hello World de Github - en français](github-hello-world-fr.md)
 
