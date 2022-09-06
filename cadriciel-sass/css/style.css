@@ -330,10 +330,10 @@ template {
    ========================================================================== */
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
 :root {
-  --couleur-texte: #022b50;
-  --couleur-titres-h1-h3: darkmagenta;
-  --couleur-dominante: darkmagenta;
-  --couleur-secondaire: #418cff;
+  --couleur-texte: Black;
+  --couleur-titres-h1-h3: HotPink;
+  --couleur-dominante: HotPink;
+  --couleur-secondaire: MediumSlateBlue;
   --bg-couleur-contraste:#efefef;
   --box-shadow:5px 5px 5px;
 }
@@ -574,7 +574,7 @@ h4,
 .nav__control:hover,
 .nav__control:active {
   color: #fff;
-  background-color: darkmagenta;
+  background-color: HotPink;
 }
 
 .nav__control:focus {
@@ -590,7 +590,7 @@ h4,
    * de modifier l'apparence du outline par défaut des navigateurs.
    */
   outline-offset: -5px;
-  outline: darkmagenta auto 5px;
+  outline: HotPink auto 5px;
 }
 
 /* Liste du menu */
@@ -622,7 +622,7 @@ h4,
 
 .nav__link:hover {
   color: #fff;
-  background-color: darkmagenta;
+  background-color: HotPink;
 }
 
 .nav__link:active {
@@ -632,7 +632,7 @@ h4,
 
 .nav__link:focus {
   outline-offset: -5px;
-  outline: darkmagenta auto 5px;
+  outline: HotPink auto 5px;
 }
 
 @media (min-width: 600px) {
