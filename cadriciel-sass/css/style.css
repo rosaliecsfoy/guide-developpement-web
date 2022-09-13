@@ -329,15 +329,6 @@ template {
 /* Variables et utilitaires
    ========================================================================== */
 /****** Variables (peuvent être utilisées dans tous les fichiers) *******/
-:root {
-  --couleur-texte: Black;
-  --couleur-titres-h1-h3: HotPink;
-  --couleur-dominante: HotPink;
-  --couleur-secondaire: MediumSlateBlue;
-  --bg-couleur-contraste:#efefef;
-  --box-shadow:5px 5px 5px;
-}
-
 /*** Clearfix ***/
 .clearfix::after {
   content: "";
@@ -574,7 +565,7 @@ h4,
 .nav__control:hover,
 .nav__control:active {
   color: #fff;
-  background-color: HotPink;
+  background-color: darkmagenta;
 }
 
 .nav__control:focus {
@@ -590,7 +581,7 @@ h4,
    * de modifier l'apparence du outline par défaut des navigateurs.
    */
   outline-offset: -5px;
-  outline: HotPink auto 5px;
+  outline: darkmagenta auto 5px;
 }
 
 /* Liste du menu */
@@ -622,7 +613,7 @@ h4,
 
 .nav__link:hover {
   color: #fff;
-  background-color: HotPink;
+  background-color: darkmagenta;
 }
 
 .nav__link:active {
@@ -632,7 +623,7 @@ h4,
 
 .nav__link:focus {
   outline-offset: -5px;
-  outline: HotPink auto 5px;
+  outline: darkmagenta auto 5px;
 }
 
 @media (min-width: 600px) {
@@ -673,6 +664,21 @@ h4,
     transition: max-height 0.5s;
   }
 }
+.nav__control:before {
+  display: inline-block;
+  content: "";
+  width: 1em;
+  height: 1em;
+  background-image: url("../images/ico-fermer.svg");
+  vertical-align: top;
+  margin-right: 0.25em;
+}
+
+.nav--closed .nav__control:before {
+  /* compléter pour afficher l’icône Hamburger */
+  background-image: url("../images/ico-menu.svg");
+}
+
 /* Grille
    ========================================================================== */
 /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
@@ -740,7 +746,7 @@ h4,
 /* Mise en page
    ========================================================================== */
 body {
-  color: var(--couleur-texte);
+  color: Black;
 }
 
 header .h1,
@@ -752,11 +758,13 @@ aside h3 {
 .description .h2 {
   padding-top: 2rem;
 }
-
 @media (min-width: 601px) {
   .description .h2 {
     padding-top: 0;
   }
+}
+
+@media (min-width: 601px) {
   .cols7de12 {
     width: 59.5%;
   }
@@ -767,45 +775,47 @@ header p {
 
 header,
 footer {
-  background-color: var(--bg-couleur-contraste);
+  background-color: #efefef;
 }
 
 header {
   padding: 1rem;
-  border-bottom: 0.5rem solid var(--bg-couleur-contraste);
-  border-image: linear-gradient(var(--couleur-secondaire), var(--couleur-dominante)) 27;
+  border-bottom: 0.5rem solid #efefef;
+  border-image: linear-gradient(MediumSlateBlue, HotPink) 27;
 }
 
 /*** Contenus principal et complémentaire ***/
 aside {
   padding: 0 1rem 0;
 }
-
 @media (min-width: 601px) {
   aside {
-    background-color: var(--bg-couleur-contraste);
+    background-color: #efefef;
   }
 }
+
 .description {
   padding: 0 2rem 0;
-  border-left: 5rem solid var(--bg-couleur-contraste);
-  border-image: linear-gradient(var(--couleur-dominante), var(--couleur-secondaire)) 27;
+  border-left: 5rem solid #efefef;
+  border-image: linear-gradient(HotPink, MediumSlateBlue) 27;
 }
 
 .description .h2,
 aside h2 {
-  color: var(--couleur-titres-h1-h3);
+  color: HotPink;
 }
 
 aside h2 {
   padding: 0 1rem 0;
   margin-bottom: 0.5rem;
 }
-
 @media (min-width: 601px) {
   aside h2 {
     margin-top: 0;
   }
+}
+
+@media (min-width: 601px) {
   aside h3 {
     margin-bottom: 0;
   }
@@ -826,26 +836,26 @@ dl,
   margin-bottom: 3rem;
   background-color: rgb(234, 226, 234);
 }
-
 @media (min-width: 601px) {
   .infos {
     padding: 1rem calc(10% + 1rem);
-    box-shadow: var(--box-shadow);
+    box-shadow: 5px 5px 5px;
     width: 120%;
     margin-left: -10%;
     margin-top: 1rem;
   }
 }
+
 dt {
   font-family: NewsCycle-bold, sans-serif;
-  color: var(--couleur-dominante);
+  color: HotPink;
 }
-
 @media (min-width: 601px) {
   dt {
     border-bottom: 2px dashed #f4a147;
   }
 }
+
 dd {
   margin-left: 2rem;
   margin-bottom: 1rem;
@@ -868,7 +878,7 @@ dt::before {
 }
 
 strong.purple {
-  color: var(--couleur-dominante);
+  color: HotPink;
   text-transform: uppercase;
 }
 
