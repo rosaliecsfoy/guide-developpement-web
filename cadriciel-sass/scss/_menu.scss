@@ -130,3 +130,17 @@
         transition: max-height 0.5s;
     }
 }
+
+.nav__control:before{
+    display: inline-block;
+    content:"";
+    width:1em;
+    height:1em;
+    background-image: url("../images/ico-fermer.svg");
+    vertical-align: top;
+    margin-right: .25em;
+}
+.nav--closed .nav__control:before{
+    /* compléter pour afficher l’icône Hamburger */
+    background-image: url("../images/ico-menu.svg");
+}
